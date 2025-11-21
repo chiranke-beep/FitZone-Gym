@@ -1,2 +1,2 @@
 # FitZone-Gym
-A gym Website with including 3 Dashboards(User, Staff, Admin)
+A gym Website including 3 Dashboards(User, Staff, Admin)
