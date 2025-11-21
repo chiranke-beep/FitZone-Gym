@@ -136,3 +136,7 @@ Software Engineering Student
 
 ---
 
+## ⭐ Show Your Support
+
+- If you like this project, please ⭐ the repository!
+
