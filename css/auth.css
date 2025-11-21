@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #ff5722;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #666;
+    --white: #ffffff;
+    --black: #000000;
+    --light-bg: #f8f9fa;
+    --border-color: #dee2e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: var(--secondary-color);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 24px;
+    color: var(--white);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+.auth-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.login-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+}
+
+.login-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.login-header h1 span {
+    color: var(--primary-color);
+}
+
+.login-header p {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.auth-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: var(--light-bg);
+    border: none;
+    border-radius: 25px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+}
+
+.form-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+.form-footer {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.form-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#select-role-message {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+.go-home-container {
+    text-align: center;
+    margin-top: 20px;
+}
+/* Remove underline from Go Home button */
+.go-home-container a {
+    text-decoration: none;
+}
+
+/* Style the mobile home button */
+.mobile-home-btn {
+    display: none;
+    font-size: 24px;
+    color: var(--white);
+}
+
+.mobile-home-btn a {
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.mobile-home-btn a:hover {
+    color: var(--primary-color);
+}
+
+/* Update media query for mobile view */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    .mobile-menu-btn {
+        display: none; /* Hide the old menu button */
+    }
+    .mobile-home-btn {
+        display: block; /* Show the home icon instead */
+    }
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    min-height: calc(100vh - 70px); /* Adjust for header height */
+    margin-top: 70px; /* Space for fixed header */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 20px;
+}
+
+.sidebar-header {
+    margin-bottom: 30px;
+}
+
+.sidebar-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin-bottom: 15px;
+}
+
+.sidebar-nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: var(--primary-color);
+}
+
+.sidebar-nav i {
+    margin-right: 10px;
+}
+
+/* Main Content */
+.dashboard-content {
+    flex: 1;
+    padding: 40px;
+    background-color: var(--light-bg);
+}
+
+.dashboard-section {
+    margin-bottom: 40px;
+}
+
+.dashboard-section h2 {
+    font-size: 28px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.card {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+/* Dashboard Table */
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-table th {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.dashboard-table td {
+    color: var(--text-light);
+}
+
+/* Small Buttons for Tables */
+.btn-small {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.btn-secondary {
+    background-color: var(--text-light);
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* Overview Grid (Admin Dashboard) */
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.overview-grid .card {
+    position: relative;
+    text-align: center;
+}
+
+.overview-grid h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.overview-grid p {
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+.overview-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: var(--primary-color);
+    opacity: 0.2;
+}
+
+/* Form Adjustments for Dashboards */
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .dashboard-content {
+        padding: 20px;
+    }
+}
